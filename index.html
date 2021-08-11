@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body style="background-image: url(./images/bg-intro-desktop.png);">
+  <main id="wrapper">
+    <div id="describe-side">
+      <h2>
+        Learn to code by watching others
+      </h2>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    <div id="right-side">
+      <div id="offer">
+        <p>
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+      </div>
+      <div id="formBlock">
+          <form> 
+            <div id="test">
+              <img src="./images/icon-error.svg" class="iconError">
+              <input type="text" placeholder="First Name" id="firstName" class="inputWrite" onchange="checkFields(this, 0)">
+            </div>
+            <p class="errorMsg">First Name cannot be empty</p>
+            <div id="test">
+              <img src="./images/icon-error.svg" class="iconError">
+              <input type="text" placeholder="Last Name" id="secondName" class="inputWrite" onchange="checkFields(this, 1)">
+            </div>
+            <p class="errorMsg">Last Name cannot be empty</p>
+            <div id="test">
+              <img src="./images/icon-error.svg" class="iconError">
+              <input type="email" placeholder="Email Address" id="email" class="inputWrite" onchange="checkChangeEmail()">
+            </div>
+            <p class="errorMsg">Looks like this is not an email</p>
+            <div id="test">
+              <img src="./images/icon-error.svg" class="iconError">                 
+              <input type="password" placeholder="Password" id="pswd" class="inputWrite" onchange="checkFields(this, 3)">
+            </div>
+            <p class="errorMsg">Password cannot be empty</p>
+            <input type="submit" value="CLAIM YOUR FREE TRIAL" id="buttonSub" onclick=" return check()">
+          </form>
+          <p id="terms">
+            By clicking the button, you are agreeing to our <span>Terms and Services</span>
+          </p>   
+      </div>
+    </div>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+</html>
